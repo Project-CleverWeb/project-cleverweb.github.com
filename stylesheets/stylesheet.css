@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,300,300italic);
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,6 +32,14 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
+.f_left{
+  float:left;
+}
+.f_right{
+  float:right;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -51,13 +61,13 @@ body {
   font-size: 1em;
   line-height: 1.5; 
   background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Roboto', sans-serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  color: #6d6d6d;
+  color: #444;
 }
 
 a {
-  color: #d5000d;
+  color: #002AE3;
 }
 a:hover {
   color: #c5000c;
@@ -69,7 +79,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900;
+  font-family: 'Roboto', sans-serif; font-weight: 900;
   letter-spacing: -1px;
   font-size: 48px;
   color: #303030;
@@ -90,7 +100,7 @@ header h2 {
 }
 
 .inner {
-  width: 620px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -103,9 +113,9 @@ header h2 {
 }
 
 a.button {
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;                     
-  border-radius: 30px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;                     
+  border-radius: 20px;
   border-top: solid 1px #cbcbcb;
   border-left: solid 1px #b7b7b7;
   border-right: solid 1px #b7b7b7;
@@ -116,8 +126,6 @@ a.button {
   font-size: 15px;
   padding: 12px 8px 12px 8px;
   display: block;
-  float: left;
-  width: 179px;
   margin-right: 14px;  
   background: #fdfdfd; /* Old browsers */
   background: -moz-linear-gradient(top,  #fdfdfd 0%, #f2f2f2 100%); /* FF3.6+ */
@@ -147,7 +155,6 @@ a.button:hover {
 }
 
 a.button span {
-  padding-left: 50px;
   display: block;
   height: 23px;
 }
@@ -218,17 +225,10 @@ em {
 
 table {
   width: 100%;
-  border: 1px solid #ebebeb;
 }
 
 th {
   font-weight: 500;
-}
-
-td {
-  border: 1px solid #ebebeb;
-  text-align: center; 
-  font-weight: 300;
 }
 
 form {
@@ -252,7 +252,7 @@ h2 {
 } 
 
 h3 {
-  color: #d5000d;
+  color: #002AE3;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
@@ -369,3 +369,32 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
+
+
+
+
+.button2 {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #e6e6e6) );
+  background:-moz-linear-gradient( center top, #ffffff 5%, #e6e6e6 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6');
+  background-color:#ffffff;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  color:#666666;
+  font-family:arial;
+  font-size:17px;
+  font-weight:bold;
+  padding:6px 18px;
+  text-decoration:none;
+}.button2:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e6e6e6), color-stop(1, #ffffff) );
+  background:-moz-linear-gradient( center top, #e6e6e6 5%, #ffffff 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e6e6', endColorstr='#ffffff');
+  background-color:#e6e6e6;
+}.button2:active {
+  position:relative;
+  top:1px;
+}
