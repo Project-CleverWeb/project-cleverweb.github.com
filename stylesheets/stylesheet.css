@@ -26,12 +26,16 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+p
+{
+text-indent:30px;
+}
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1em;
 }
 
 .f_left{
@@ -60,7 +64,7 @@ table {
 /* LAYOUT STYLES */
 body {
   font-size: 1em;
-  line-height: 1.5; 
+  line-height: 1.3; 
   background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
   font-family: 'Roboto', sans-serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -173,32 +177,7 @@ a.button span {
   margin-right: 0;
 }
 
-code, pre {
-  font-family: 'Droid Sans Mono', sans-serif;
-  color: #222;
-  margin-bottom: 30px;
-  font-size: 14px;
-}
 
-code {
-  background-color: #f2f2f2;
-  border: solid 1px #ddd;
-  padding: 0 3px;
-}
-
-pre {
-  padding: 20px;
-  background: #303030;
-  color: #f2f2f2;
-  text-shadow: none;
-  overflow: auto;
-}
-pre code {
-  color: #f2f2f2;
-  background-color: #303030;
-  border: none;
-  padding: 0;
-}
 
 ul, ol, dl {
   margin-bottom: 20px;
@@ -399,3 +378,117 @@ footer a:hover {
   position:relative;
   top:1px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * GitHub theme
+ *
+ * @author Craig Campbell
+ * @version 1.0.4
+ */
+pre {
+    border: 1px solid #ccc;
+    word-wrap: break-word !important;
+    padding: 6px 10px;
+    line-height: 19px;
+    margin-bottom: 20px;
+    overflow:auto;
+}
+
+code {
+    border: 1px solid #eaeaea;
+    margin: 0px 2px;
+    padding: 0px 5px;
+    font-size: 12px;
+}
+
+pre code {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+code span {
+        -moz-transition: color 1.8s ease-in;
+        -o-transition: color 1.8s ease-in;
+        -webkit-transition: color 1.8s ease-in;
+        transition: color 1.8s ease-in;
+    }
+.animate {
+        color: #000 !important;
+    }
+pre, code {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    color: #333;
+    background: #f8f8f8;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+pre, pre code {
+    font-size: 13px;
+}
+
+pre .comment {
+    color: #998;
+}
+
+pre .support {
+    color: #0086B3;
+}
+
+pre .tag, pre .tag-name {
+    color: navy;
+}
+
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+    font-weight: bold;
+}
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+    color: #333;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+    font-weight: normal;
+    color: #099;
+}
+
+pre .entity.class {
+    color: #458;
+}
+
+pre .entity.id, pre .entity.function {
+    color: #900;
+}
+
+pre .attribute, pre .variable {
+    color: teal;
+}
+
+pre .string, pre .support.value  {
+    font-weight: normal;
+    color: #d14;
+}
+
+pre .regexp {
+    color: #009926;
+}
+
+

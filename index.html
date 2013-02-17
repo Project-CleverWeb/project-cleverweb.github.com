@@ -10,6 +10,10 @@
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<title>Project-cleverweb.github.com by Project-CleverWeb</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="./javascripts/highlight.js/styles/github.css">
+<script src="./javascripts/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 	</head>
 
 	<body>
@@ -38,10 +42,45 @@
 
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<pre><code class="brush: php">&lt;?php // good ?&gt;
+&lt;div class=&quot;foo&quot; id=&quot;bar&quot;&gt;
+  &lt;a
+    href=&quot;&lt;?php
+      add_query_arg(
+        array(
+          'id'   =&gt; get_current_user_id(),
+          'hash' =&gt; wp_hash($info)
+        )
+        the_permalink()
+      ); 
+    ?&gt;&quot;
+    alt=&quot;Click Me!&quot;
+    rel=&quot;follow&quot;
+    title=&quot;&lt;?php the_title_attribute(); ?&gt;&quot;
+    target=&quot;_blank&quot;
+  &gt;&lt;?php the_title(); ?&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;?php
+// better
+blog::post_link(TRUE , // echo
+  array( // args array
+    'wrap_tag'   =&gt; 'div',
+    'wrap_class' =&gt; 'foo',
+    'wrap_id'    =&gt; 'bar',
+    'target'     =&gt; '_blank',
+    'alt'        =&gt; 'Click Me!',
+    'rel'        =&gt; 'follow',
+    'text'       =&gt; $_CW-&gt;blog['post_title'] // visible text of link
+    'query'      =&gt;
+      array(
+        'id'   =&gt; user::id(),
+        'hash' =&gt; secure::hash($info),
+      )
+  )
+);
+?&gt;</code></pre>
+
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
